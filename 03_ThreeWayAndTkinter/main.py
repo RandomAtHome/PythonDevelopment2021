@@ -17,7 +17,7 @@ class Application(tk.Frame):
         super().__init__(*args, **kw)
         self.actions_bar = ActionsBar(self)
         self.game_grid = GameOf15(self)
-        self.actions_bar.pack()
+        self.actions_bar.pack(fill="x")
         self.game_grid.pack(fill="both", expand=1)
 
     def restart_game(self):
@@ -33,6 +33,8 @@ class ActionsBar(tk.Frame):
         super().__init__(master, *args, **kw)
         self.restart_game = tk.Button(self, text="New", command=self.master.restart_game)
         self.quit = tk.Button(self, text="Exit", fg="red", command=self.master.quit)
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=1)
         self.restart_game.grid(row=0, column=0)
         self.quit.grid(row=0, column=1)
 
