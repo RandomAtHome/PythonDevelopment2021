@@ -1,0 +1,1 @@
+Solution for this [home task](https://uneex.org/LecturesCMC/PythonDevelopment2021/03_ThreeWayAndTkinter) (see end of page).
